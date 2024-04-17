@@ -71,8 +71,8 @@ resource "azurerm_windows_virtual_machine" "windows01" {
     "Owner" = "HR"
   }
   size                = "Standard_F2"
-  admin_username      = local.username  # hriyen
-  admin_password      = local.admin_password  # Admin#12123
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
   network_interface_ids = [
     azurerm_network_interface.nic01.id,
   ]
